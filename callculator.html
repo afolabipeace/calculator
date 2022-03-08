@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #sec{
+            width: 28%;
+            height: 100vh;
+            background-color: rgb(72, 45, 97);
+            transform: translate(50vh, -1vh);
+            border-radius: 3%;
+        }
+        #div{
+            background-color: brown;
+            width: 80%;
+            height: 25vh;
+            transform: translate(6vh,3vh);
+            border-radius: 6%;
+        }
+        #divv{
+            background-color: white;
+            width: 80%;
+            height: 10vh;
+            transform: translate(4vh, 6vh);
+        }
+        button{
+            background-color: rgb(87, 80, 80);
+            transform: translate(0, 15vh);
+            width: 15%;
+            height: 5vh;
+            border: none;
+            color: white;
+        }
+        @media only screen and (max-width:500px){
+            #sec{
+            width: 88%;
+            height: 80vh;
+            transform: translate(5vh, -1vh);
+            }
+            #div{
+                width: 80%;
+                height: 15vh;
+                transform: translate(4vh,3vh);
+            }
+            #divv{
+                width: 80%;
+                height: 5vh;
+                transform: translate(2vh, 1vh);
+            }
+            button{
+                transform: translate(0, 8vh);
+                width: 15%;
+                height: 5vh;
+            }
+        }
+        @media only screen and (min-width:500px){
+            #sec{
+            width: 78%;
+            height: 80vh;
+            transform: translate(5vh, -1vh);
+            }
+            #div{
+                width: 80%;
+                height: 15vh;
+                transform: translate(4vh,3vh);
+            }
+            #divv{
+                width: 80%;
+                height: 5vh;
+                transform: translate(2vh, 1vh);
+            }
+            button{
+                transform: translate(0, 8vh);
+                width: 15%;
+                height: 5vh;
+            }
+        }
+        @media only screen and (min-width:490px){
+            #sec{
+            width: 78%;
+            height: 80vh;
+            transform: translate(5vh, -1vh);
+            }
+        }
+        @media only screen and (min-width:400px){
+            #sec{
+            width:78%;
+            height: 80vh;
+            transform: translate(5vh, -1vh);
+            }
+        }
+        @media only screen and (min-width:576px){
+            #sec{
+            width: 68%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+            }
+        }
+        @media only screen and (min-width: 600px){
+            #sec{
+            width: 58%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+            }
+        }
+        @media only screen and (min-width: 664px){
+            #sec{
+            width: 58%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+            }
+        }
+        @media only screen and (min-width: 700px){
+            #sec{
+            width: 58%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+             }
+        }
+        @media only screen and (min-width: 730px){
+            #sec{
+            width: 48%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+             }
+        }
+        @media only screen and (min-width: 795px){
+            #sec{
+            width:48%;
+            height: 60vh;
+            transform: translate(5vh, -1vh);
+             }
+        }
+        @media only screen and (min-width: 800px){
+            #sec{
+            width: 48%;
+             }
+        }
+        @media only screen and (min-width: 900px){
+            #sec{
+            width: 45%;
+             }
+        }
+        @media only screen and (min-width: 950px){
+            #sec{
+            width: 42%;
+             }
+        }
+        @media only screen and (min-width: 990px){
+            #sec{
+            width: 40%;
+             }
+        }
+        @media only screen and (min-width: 1000px){
+            #sec{
+            width:35%;
+            height: 80vh;
+             }
+        }
+        @media only screen and (min-width: 1200px){
+            #sec{
+            width:30%;
+             height: 80vh;
+             transform: translate(70vh);
+            }
+        }
+        @media only screen and (min-width: 1300px){
+            #sec{
+            width: 28%;
+             }
+        }
+        @media only screen and (min-width: 1500px){
+            #sec{
+            width: 25%;
+             }
+        }
+    </style>
+</head>
+<body>
+    <section id="sec" name="calculator">
+        <div id="div"><P style="color: white; margin-top: 20px; margin-left: 20px;">CASIO</P>
+            <input type="text" name="result" placeholder="" style="text-align: right;" id="divv">
+            <div>
+                <button type="button" value="on" onclick="on()" class="clear">ON</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div><br>
+            <div>
+                <button id="but1" value="1" onclick="number(1)" disabled>1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+                <button id="but2" value="2" onclick="number(2)" disabled>2</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+                <button id="but3" value="3" onclick="number(3)" disabled>3</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+                <button id="but4" value="del" onclick="del()" disabled>DEL</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              
+            </div>
+        <div>
+            <button id="but5" value="4" onclick="number(4)" disabled>4</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="but6" value="5" onclick="number(5)" disabled>5</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+            <button id="but7" value="6" onclick="number(6)" disabled>6</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+            <button id="but8" value="-" onclick="number('-')" disabled>-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+         </div>
+         <div>
+            <button  id="but9" value="7" onclick="number(7)" disabled>7</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="but10" value="8" onclick="number(8)" disabled>8</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+            <button id="but11" value="9" onclick="number(9)" disabled>9</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+            <button id="but12" value="/" onclick="number('/')" disabled>/</button>          
+        </div><br>
+        <div>
+         <button id="but13" value="." onclick="number('.')" disabled>.</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="but14" value="0" onclick="number(0)" disabled>0</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+            <button id="but15" value="*" onclick="number('*')" disabled>*</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="but16" value="%" onclick="number('%')" disabled>%</button>      
+        </div><br>
+        <div>
+            <button id="but17" id="equ" onclick="equal()" class="equal" disabled>=</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button id="but18" value="+" onclick="number('+')"  disabled>+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button id="but19" value="log" onclick="ac()"  disabled>AC</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button id="but20" value="in" onclick="number(value)"  disabled>in</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+
+           function on(){
+               document.getElementById("but1").disabled= false
+               document.getElementById("but2").disabled= false
+               document.getElementById("but3").disabled= false
+               document.getElementById("but4").disabled= false
+               document.getElementById("but5").disabled= false
+               document.getElementById("but6").disabled= false
+               document.getElementById("but7").disabled= false
+               document.getElementById("but8").disabled= false
+               document.getElementById("but9").disabled= false
+               document.getElementById("but10").disabled= false
+               document.getElementById("but11").disabled= false
+               document.getElementById("but12").disabled= false
+               document.getElementById("but13").disabled= false
+               document.getElementById("but14").disabled= false
+               document.getElementById("but15").disabled= false
+               document.getElementById("but16").disabled= false
+               document.getElementById("but17").disabled= false
+               document.getElementById("but18").disabled= false
+               document.getElementById("but19").disabled= false
+               document.getElementById("but20").disabled= false
+               divv.value = 0
+          }
+        function number(num){
+            divv.value+=num
+        }
+        function del(){
+            let ola = divv.value
+            divv.value= ola.slice(0,-1)
+        }
+        function equal(){
+         divv.value= eval(divv.value)
+            
+        }
+        function ac(){
+            divv.value=""
+        }
+        function square(){
+            equ.value = divv.value*divv.value
+        }
+        function squa(){
+            equ.value = divv.value*divv.value*divv.value;
+        }
+        // function tan(){
+        //     document.calculator.result.value=Math.tan(document.calculator.result.value);
+        // }
+        // function BACKSPC(){
+        //     var a = document.calculator.result.value;
+        //     document.calculator.result.value = a. substr(0,a.length-1);
+        // }
+      
+        // function qubbed(){
+        //     document.calculator.result.value = Math.pow(document.calculator.result.value, 3);
+        // }
+        // function sqrt2(){
+        //     document.calculator.result.value =Math.pow(document.calculator.result.value, 1/2);
+        // }
+        // function sqrt3(){
+        //     document.calculator.result.value =Math.pow(document.calculator.result.value, 1/3);
+        // }
+        // function number(value){
+        //     document.calculator.result.value += value;
+        // // }
+        // 
+        // function result(){
+        //     divv.calculator.result.value
+        // }
+    </script>
+</body>
+</html>
